@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Control 3x1L</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fefefe; color: #333; }
+    .container { max-width: 800px; margin: auto; padding: 2rem; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+    h1, h2 { text-align: center; }
+    img { max-width: 100%; display: block; margin: auto; }
+    .btn {
+      display: block; margin: 2rem auto; background: #ff5722; color: #fff;
+      padding: 1rem 2rem; text-align: center; text-decoration: none;
+      font-size: 1.3rem; border-radius: 8px;
+    }
+    .benefits, .testimonials, .guarantee { margin-top: 2rem; }
+    .benefits ul { padding-left: 1.2rem; }
+    .benefits li { margin-bottom: 0.5rem; }
+    .testimonial { background: #f4f4f4; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; }
+    .timer { font-size: 1.5rem; text-align: center; margin: 1rem 0; color: red; font-weight: bold; }
+  </style>
+  <script>
+    function startCountdown(duration, display) {
+      var timer = duration, minutes, seconds;
+      setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) timer = duration;
+      }, 1000);
+    }
+
+    window.onload = function () {
+      var fiveMinutes = 60 * 5;
+      var display = document.querySelector('#time');
+      startCountdown(fiveMinutes, display);
+    };
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Beauty Control 3x1L</h1>
+    <p style="text-align:center; font-size:1.1rem;">Hidratação, revitalização e proteção diária da pele com fórmula avançada.</p>
+    <img src="https://cdn.shopify.com/s/files/1/0747/3829/4433/products/beautycontroltrio.jpg" alt="Beauty Control 3x1L">
+
+    <div class="timer">🔥 Oferta expira em <span id="time">05:00</span>!</div>
+
+    <a class="btn" href="https://checkout.perfectpay.com.br/pay/PPU38CPRPNQ" target="_blank">Sim! Quero transformar minha pele agora</a>
+
+    <div class="benefits">
+      <h2>✅ Benefícios</h2>
+      <ul>
+        <li>Hidrata profundamente todos os tipos de pele</li>
+        <li>Revitaliza e ilumina com uso contínuo</li>
+        <li>Proteção contra poluição e ressecamento</li>
+        <li>Embalagem econômica com 3 frascos de 1L</li>
+        <li>Fórmula segura, dermatologicamente testada</li>
+      </ul>
+    </div>
+
+    <div class="testimonials">
+      <h2>💬 Depoimentos Reais</h2>
+      <div class="testimonial">"Minha pele nunca ficou tão macia! Amei o resultado!" — <strong>Juliana M. - RJ</strong></div>
+      <div class="testimonial">"Usei por uma semana e já senti diferença. Recomendo demais." — <strong>Carla S. - SP</strong></div>
+      <div class="testimonial">"Textura leve, rende muito. Vale cada centavo." — <strong>Natália V. - MG</strong></div>
+    </div>
+
+    <div class="guarantee">
+      <h2>🛡️ Garantia Incondicional</h2>
+      <p style="text-align:center;">Você tem <strong>7 dias de garantia</strong>. Se não gostar, devolvemos 100% do seu dinheiro. Compra sem risco!</p>
+    </div>
+
+    <a class="btn" href="https://checkout.perfectpay.com.br/pay/PPU38CPRPNQ" target="_blank">Quero Garantir Meu Kit Agora</a>
+  </div>
+</body>
+</html>
